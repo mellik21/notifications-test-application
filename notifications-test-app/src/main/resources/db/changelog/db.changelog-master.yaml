@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/create-notification-table.yaml
+  - include:
+      file: db/changelog/create-store-table.yaml
+  - include:
+      file: db/changelog/create-notification-stores-table.yaml

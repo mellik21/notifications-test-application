@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: anastasiia_solomakhina
+      changes:
+        - createTable:
+            tableName: notification_stores
+            columns:
+              - column:
+                  name: notification_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_notification_id
+                    references: notification(id)
+              - column:
+                  name: store_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_store_id
+                    references: store(id)

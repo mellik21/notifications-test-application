@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: com.epam.notifications-test-app
+  datasource:
+    url: jdbc:h2:~/test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    generate-ddl: false
+    properties:
+      hibernate:
+        temp.use_jdbc_metadata_defaults: false
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    enabled: true
+
+server:
+  port: 8080
